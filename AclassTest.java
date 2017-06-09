@@ -1,5 +1,8 @@
 import static org.junit.Assert.*;
 
+import java.awt.Point;
+import java.awt.PointerInfo;
+
 import org.junit.Test;
 
 public class AclassTest {
@@ -20,6 +23,17 @@ public class AclassTest {
 		assertEquals(esperado4, a.concat(true, "bombi","lla"));
 		try {
 		assertEquals(null, a.concat(true,null,null));
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+	}
+	public void locateTest(){
+		int x=1;
+		int y=2;
+		double esperado=(1.2);
+		assertEquals(0, a.locate(x, y));
+		try {
+			assertEquals(1, a.locate(0, 0));
 		} catch (Exception e) {
 			// TODO: handle exception
 		}
